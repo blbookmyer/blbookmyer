@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xlmns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Exercise 5 Part 1</title>
+  <script type="text/javascript">
+    function rentalFee(){
+      var name = document.getElementById('userName').value;
+      var street = document.getElementById('address').value;
+      var city = document.getElementById('city').value;
+      var state = document.getElementById('state').value;
+      var zip = document.getElementById('zipCode').value;
+      var beginOd = document.getElementById('beginOdometer').value;
+      var endOd = document.getElementById('endOdometer').value;
+      var rentalDays = document.getElementById('numDays').value;
+      var totalCharge = 0;
+      totalCharge = ((rentalDays * 15) + ((endOd - beginOd) * 0.12));
+      alert(name + "owes $" + totalCharge + " and will be billed to the address of " + street + " " + city + " " + state + " " + zip)
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <input type="text" value="" id="userName">Enter your Full Name</input></br>
+    <input type="text" value="" id="address">Enter your Street Address</input></br>
+    <input type="text" value="" id="city">Enter your City</input></br>
+    <input type="text" value="" id="state">Enter your State</input></br>
+    <input type="text" value="" id="zipCode">Enter your Zip Code</input></br>
+    <input type="text" value="" id="beginOdometer">Enter the beginning Odometer Reading</input></br>
+    <input type="text" value="" id="endOdometer">Enter the ending Odometer Reading</input></br>
+    <input type="text" value="" id="numDays">Enter the number of Days you had the vehicle</input></br>
+    <input type="submit" value="Submit" onclick="rentalFee();" />
+  </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 6 Part 1</title>
+  <script>
+    function calculateGrade(){
+      var name = document.getElementById('studentName').value;
+      var quiz = document.getElementById('quizScore').value;
+      var assignment = document.getElementById('assignmentScore').value;
+      var midterm = document.getElementById('midtermExam').value;
+      var final = document.getElementById('finalExam').value;
+      var averageScore = 0;
+      var letterGrade = "";
+      averageScore = ((quiz * (15/100)) + (assignment * (40/100)) + (midterm * (20/100)) + (final * (25/100)));
+      if (averageScore >= 60){
+        letterGrade = "D";
+      }
+      if (averageScore >= 70){
+        letterGrade = "C";
+      }
+      if (averageScore >= 80){
+        letterGrade = "B";
+      }
+      if (averageScore >= 90){
+        letterGrade = "A";
+      }
+      else{
+        letterGrade = "F";
+      }
+      alert(name + " has received a(n) " + letterGrade + " with an average score of " + averageScore + ".")
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <input type="text" id="studentName" value="">Enter your Full Name</input></br>
+    <input type="text" id="quizScore" value="">Enter total quiz score</input></br>
+    <input type="text" id="assignmentScore" value="">Enter total assignment score</input></br>
+    <input type="text" id="midtermExam" value="">Enter midterm exam score</input></br>
+    <input type="text" id="finalExam" value="">Enter final exam score</input></br>
+    <input type="submit" value="Calculate Grade" onclick="calculateGrade();" />
+  </form>
+</body>
+</html>

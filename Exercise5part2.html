@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise 5 Part 2</title>
+  <script>
+    function calculatePrice(){
+      var imageOption = document.getElementById('optionType').value;
+      var discountOption = document.getElementById('discountValue').value;
+      var totalCost = 0;
+      totalCost= (imageOption - (imageOption * (discountOption / 100)));
+      alert("The totale cost = $" + totalCost);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <select name="option" id="optionType" value="">
+      <option value="">SELECT SERVICE</option>
+      <option value="125">Makeover $125</option>
+      <option value="60">Hair Styling $60</option>
+      <option value="35">Manicure $35</option>
+      <option value="200">Permanent Makeup $200</option>
+    </select></br>
+    <select name="discount" id="discountValue" value="">
+      <option value="0">No Discount</option>
+      <option value="10">10% Discount</option>
+      <option value="20">20% Discount</option>
+    </select></br>
+    <input type="submit" value="Calculate" onclick="calculatePrice();"
+  </form>
+</body>
+</html>

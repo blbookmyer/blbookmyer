@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Final Exam Project Part 3</title>
+    <script>
+      function customerTotal(){
+        var items = document.getElementById('numberItems').value;
+        var cost = document.getElementById('costItems').value;
+        var discount = document.getElementById('discountID').value;
+        var initialCost = 0;
+        var discountCost = 0;
+        var finalCost = 0;
+        var taxCost = 0;
+        initialCost = (items * cost);
+        discountCost = ((discount / 100) * initialCost);
+        taxCost = ((initialCost - discountCost) * (0.08));
+        finalCost = ((initialCost - discountCost) + taxCost);
+        alert("The total cost of your purchas is $" + finalCost + ". Thank you for shopping with us and have a nice day!")
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" value="" id="numberItems">Enter the number of items bought</input></br></br>
+    <input type="text" value="" id="costItems">Enter the cost per item</input></br></br>
+    <select name="discout" id="discountID" value="">
+      <option value="0">No Discount</option>
+      <option value="10">10% Discount</option>
+      <option value="20">20% Discount</option>
+    </select></br></br>
+    <input type="submit" value="Submit" onclick="customerTotal();" />
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Final Exam Project Part 1</title>
+  <script>
+    function calculateIdealWeight(){
+      var userHeight = document.getElementById('height').value;
+      var userGender = document.getElementById('genderID').value;
+      var idealWeight = 0;
+      if (userGender == 1){
+        idealWeight = ((userHeight * 4) - 128);
+      }
+      else {
+        idealWeight = ((userHeight * 3.5) - 108);
+      }
+      alert("The user's ideal weight is " + idealWeight + " pounds.")
+    }
+  </script>
+</head>
+<body>
+  <select name="gender" id="genderID" value="">
+    <option value="">SELECT GENDER</option>
+    <option value="1">Male</option>
+    <option value="2">Female</option>
+  </select></br>
+  <input type="text" value="" id="height">Enter how tall you are in inches</input></br>
+  <input type="submit" value="Submit" onclick="calculateIdealWeight();" />
+</body>
+</html>

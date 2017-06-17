@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Exercise 4</title>
+  <script type="text/javascript">
+    function parkingPrice(){
+      var hoursParked = document.getElementById('parkedHours').value;
+      var parkingCost = 0;
+      if (hoursParked <= 3){
+        parkingCost = 5;
+      }
+      if (hoursParked == 0){
+        parkingCost = 0;
+      }
+      if (hoursParked > 3){
+        parkingCost = (5 + (1.5 *(hoursParked - 3)));
+      }
+      if (hoursParked >= 12){
+        parkingCost = 18;
+      }
+      alert("You have parked for " + hoursParked + " hour(s) and the cost of your parking = $" + parkingCost)
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <input type="text" value="" name="Hours" id="parkedHours" /></br>
+    <input type="submit" value="Submit" onclick="parkingPrice();" />
+  </form>
+  <div id="hoursDisplay">
+  </div>
+</body>
+</html>

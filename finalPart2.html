@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Final Exam Project Part 2</title>
+    <script>
+      function calculateTHR(){
+        var rhr = document.getElementById('userRestingHR').value;
+        var age = document.getElementById('userAge').value;
+        var thr = 0;
+        var maxHR = 220 - age;
+        thr = ((maxHR - rhr) * 1.6);
+        alert("The training heart rate for you is " + thr + " bpm. Happy exercising!");
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" value="" id="userAge">Please enter your age</input></br></br>
+    <input type="text" value="" id="userRestingHR">Please enter your resting heart rate in bpm (beats per minute)</input></br></br>
+    <input type="submit" value="Submit" onclick="calculateTHR();"/>
+  </body>
+</html>

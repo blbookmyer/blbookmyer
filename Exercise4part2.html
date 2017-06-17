@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise4</title>
+  <script type="text/javascript">
+    function rentalPrice(){
+      var rentalType = document.getElementById('carType').value;
+      var rentalDay = document.getElementById('rentalDays').value;
+      var rentalCost = 0;
+      if (rentalType == 'compact'){
+        rentalCost = (30 * rentalDay);
+      }
+      if (rentalType == 'intermediate'){
+        rentalCost = (40 * rentalDay);
+      }
+      if (rentalType == 'standard'){
+        rentalCost = (50 * rentalDay);
+      }
+      alert("The cost of your rental will be $" + rentalCost);
+    }
+  </script>
+</head>
+<body>
+  <h3>Calculate your Rental Price</h3>
+  <form>
+    <select name="cars" id="carType" value="">
+      <option value="">SELECT RENTAL TYPE</option>
+      <option value="compact">Compact</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="standard">Standard</option>
+    </select></br>
+    <p>Enter the number of days you need the vehicle:</p>
+    <input type="text" value="" id="rentalDays" /></br></br>
+    <input type="submit" value="Submit" onclick="rentalPrice();" />
+  </form>
+</body>
+</html>
